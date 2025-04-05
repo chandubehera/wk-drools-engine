@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class DroolsConfig {
 
-    private static final String drl_file_path = "rules/discount-rules.drl";
+   private static final String drl_file_path = "rules/high-value-rule.drl";
 
     private static final KieServices kieServices = KieServices.Factory.get();
 

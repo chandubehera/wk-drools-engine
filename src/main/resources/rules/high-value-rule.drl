@@ -1,0 +1,13 @@
+// TEST RULE FILE LOADED
+package rules
+
+import com.wk.ruleengine.model.Transaction;
+
+rule "High Value Transaction"
+    when
+        $t : Transaction(amount > 50000)
+    then
+        $t.setHighValue(true);
+        System.out.println("High value transaction detected: " + $t);
+        update($t);
+end
